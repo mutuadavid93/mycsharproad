@@ -1,0 +1,26 @@
+### Interfaces
+	Declared using the interface keyword.
+	An interface can only contain declarations but no implementations.
+
+	NB: Convention, prefix the Name with a capital "I" i.e interface ICustomer{ }
+
+	NB: Interface members are public by default, but you can't explicitly have
+		the public access modifier. i.e 
+			Correct: void interfaceMember();
+			Wrong: public void interfaceMember();
+
+	#Interface can't have a field e.g int passMark;
+	
+	#A class inheriting an interface must implement "ALL" the interface members.
+		The methods should have same signatures.
+
+NB: A struct or a class can Inherit from multiple Interfaces @thesame time.
+
+NB: You can't create an instance of an Interface but you can have an Interface reference 
+	variable point to a derived class object.
+
+	i.e because the Interface its a Parent of a class by default in C#.
+
+
+
+

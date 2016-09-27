@@ -1,0 +1,45 @@
+### CSharp Structures
+	* They are "similar" to classes in that they; have constructors, properties,
+	  methods and objects.
+	* Difference:
+
+		# Structs are value types whereas Classes are reference types.
+		# Structs are stored on a stack whilst classes are stored on a heap.
+		# Structs e.g. Enums, Int, double whilst Classes e.g. Delegates and Interfaces.
+
+
+		# Value types hold a space in memory where they are declared whereas
+			reference types hold a reference to an object stored in memory.
+
+			e.g Customer c1 = new Customer(); c1 = ref var && Customer() is the object;
+
+		#Value types and reference variables are immediately destroyed when scope is lost, but the object
+			(stored in heap) are destroyed by garbage collector.
+
+		#When you copy a struct into another struct, a new copy of that struct gets created and
+			modifications on one struct will not affect the values contained by the other struct.
+
+		#When u copy a class into another class, we only get a copy of the reference variable. Both the
+			reference vars point to the "SAME object" on the heap. Thus, operations on one variable will 
+			affect the values contained by other reference variable.
+
+		#Structs cannot have destructors whereas classes have destructors by default
+			i.e ~Customer() {  } 
+
+		#Structs cannot have explicit parameterless constructors whereas classes can (i.e. default constructor);
+
+		#Structs don't support inheritance whereas classes support. However, both Structs and Classes 
+			can inherit from an Interface.
+
+		#Both structs and classes can't inherit a "sealed" class/struct.
+
+NB: sealed class, is a class which can never become a parent of any class.
+	i.e public sealed class Student{  }
+
+NB: By default Structs are sealed thus can't allow inheritance by other structs.
+
+
+
+
+
+
