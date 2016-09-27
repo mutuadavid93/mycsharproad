@@ -1,0 +1,26 @@
+### Properties
+	Exposing your fields with public access modifier its wrong since it makes us
+		lose control of what gets into the fields and what goes out of the fields.
+
+	* we use setters and getters methods to allow safer access and gain control
+		of what is assigned to those fields.
+
+	NB: the setter method is void whereas the getter method can't be void and
+		must return a value. 
+		i.e in the setter this._id = id; then getter return this._id;
+
+	NB: To make fields ReadOnly, we use only the getter method but avoid the
+		setter method. so no one will ever change that field's value.
+
+### C# does not need to use setter and getter properties by default. It has a choice;
+	* We use both set and get methods inside one method.
+	* the value set in the invokation is what is assigned to the "value" in the property
+
+	NB: get / set accessors refer to Read / Write respectively.
+		* get is Read only 
+		* set is Write only
+
+	NB: When there is no logic int the fields, then we can use auto implement properties
+		i.e public int studentID { get; set; }
+
+
