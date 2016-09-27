@@ -1,0 +1,69 @@
+C# { CSharp }
+
+# Methods/Functions
+
+### if you create an instance method, you MUST create the instance of that class
+	then call the method using the object variable. i.e objectVar.instanceMethod();
+
+	NB: The opposite; if the method is static, you invoke the method using the
+		class name i.e className.staticMethod();
+
+	NB: passing a parameter by value, the vars are pointing to different memory locations
+		while passing by reference they point to the same memory location
+		thus the final result is the same. i.e must use ref keyword.
+
+	NB: When you create output parameters, you use the out keyword not only
+		on the method declaration as well as method invocation. mostly used
+		when you need a function to return more than one value.
+
+	NB: parameter arrays, it has to be the last parameter and there should only
+		be one parameter array in a method. You can also pass comma values separeted
+		in the invokation of the method.
+
+## Namespaces
+	Help you organize your program and assit us avoid name clashes in humogous
+	projects.
+
+	* We can resolve Ambiguity between classnames either by using "Fully qualified"
+		namespaces or by using "aliases"
+
+	* Namespaces don't correspond to dir, files or assembly names. They can
+		be writen in separate files/assemblies and still belong to same
+		namespace.
+	* Namespaces can be nested in two ways; using a dot or charlybraces.
+
+## Classes
+	A class consists of data -- Fields and behaviour -- Methods.
+
+	* Contructor are used to "initialize" your class fields. They are contain the name
+		of the Class and Can't have a return type.
+	* Destructor has the same name to that of class but cannot have any parameters
+		and its prceded by a tild (~).
+	* A constructor is called automatically when the instance of the class is
+		created.
+	* We can overload contrustors by type (default, parameterless and parameterrized) and number of parameters.
+
+	NB: default constructor is same to parameterless constructor.
+
+## Static and instance class members
+	* A constructor which is static doesn't require to have an access modifier.
+	* Any static class member is saved in memory only once, hence saving memory.
+	* if any member lacks an access moifier, then its assumed private.
+
+	NB: static constructors lack access modifiers, are used to initialize static fields 
+		and they are called before instance constructors are called. Futhermore, 
+		they are only once!
+
+
+
+
+
+
+
+
+
+
+
+
+
+

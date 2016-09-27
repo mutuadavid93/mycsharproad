@@ -1,0 +1,48 @@
+
+### Inheritance
+	
+	Avoid duplication where most common attributes are kept in one base (Parent)
+	class. Inheritance supports code re-usability.
+
+	syntax: public class derivedClass : baseClass {
+
+	}
+
+	NB: The derived class is a specialization of the baseClass and it can access
+		all baseClass's members plus its own.
+
+	NB: CSharp Only supports "Single class inheritance" i.e A class can only
+		inherit only one baseClass;
+	* But instead it supports Multi-level inheritance;
+
+	NB: C# supports Multiple Interface inheritance.
+	* Base class is automatically instantiated before any child class i.e it
+		happens immediately as a childClass's instance its created.
+
+	NB: Child class can control which Constructor is called in parent class by 
+		using the base() function and passing values of that parent's constructor onto the 
+		child's constructor
+		i.e;
+		public Childclassconstructor() : base("Message to parent"){ }
+
+### Method hiding
+	Occurs when you use the "same method" in a childClass which has already been declared
+		in the baseClass. i.e. we say the childClass method is "hiding" the baseClass's
+		method.
+
+	NB: Always use the New keyword.
+	* But if you still want to use(invoke) the hidden baseClass method, you use a 
+		## base keyword on baseClass method inside the child class's method.
+		   	i.e base.printFullName();
+		## typecast the child instance to baseClass object
+			i.e ((baseClass)childInstance).printFullName();
+		## baseClass reference variable to point to the childClass object
+			baseClass pt = new childClass();
+
+
+
+
+
+
+
+	

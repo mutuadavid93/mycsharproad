@@ -1,0 +1,6 @@
+F:\CSharpWorkspace\CSharpInhreitance\CSharpInhreitance\bin\Debug\CSharpInhreitance.exe.config
+F:\CSharpWorkspace\CSharpInhreitance\CSharpInhreitance\obj\Debug\CSharpInhreitance.csprojResolveAssemblyReference.cache
+F:\CSharpWorkspace\CSharpInhreitance\CSharpInhreitance\bin\Debug\CSharpInhreitance.exe
+F:\CSharpWorkspace\CSharpInhreitance\CSharpInhreitance\bin\Debug\CSharpInhreitance.pdb
+F:\CSharpWorkspace\CSharpInhreitance\CSharpInhreitance\obj\Debug\CSharpInhreitance.exe
+F:\CSharpWorkspace\CSharpInhreitance\CSharpInhreitance\obj\Debug\CSharpInhreitance.pdb

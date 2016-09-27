@@ -1,0 +1,4 @@
+F:\CSharpWorkspace\Namespaces\ProjectA.TeamA\bin\Debug\ProjectA.TeamA.dll
+F:\CSharpWorkspace\Namespaces\ProjectA.TeamA\bin\Debug\ProjectA.TeamA.pdb
+F:\CSharpWorkspace\Namespaces\ProjectA.TeamA\obj\Debug\ProjectA.TeamA.dll
+F:\CSharpWorkspace\Namespaces\ProjectA.TeamA\obj\Debug\ProjectA.TeamA.pdb

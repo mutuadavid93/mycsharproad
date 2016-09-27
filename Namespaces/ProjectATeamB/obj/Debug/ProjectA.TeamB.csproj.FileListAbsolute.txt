@@ -1,0 +1,5 @@
+F:\CSharpWorkspace\Namespaces\ProjectATeamB\bin\Debug\ProjectATeamB.dll
+F:\CSharpWorkspace\Namespaces\ProjectATeamB\bin\Debug\ProjectATeamB.pdb
+F:\CSharpWorkspace\Namespaces\ProjectATeamB\obj\Debug\ProjectA.TeamB.csprojResolveAssemblyReference.cache
+F:\CSharpWorkspace\Namespaces\ProjectATeamB\obj\Debug\ProjectATeamB.dll
+F:\CSharpWorkspace\Namespaces\ProjectATeamB\obj\Debug\ProjectATeamB.pdb

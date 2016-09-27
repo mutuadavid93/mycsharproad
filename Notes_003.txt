@@ -1,0 +1,39 @@
+### Polymorphism
+	Enables you to invoke derived class methods through baseClass reference 
+	variable at runtime.
+
+	i.e baseClass BCRV = new derivedClass();
+		BCRV.derivedClassMethod();
+
+	NB: Polymorphism uses method overriding: the method to be overriden is declared 
+		with a "virtual" keyword 
+				i.e public virtual void printfullname{ }
+
+		then the overriding method is declared
+		with an "overrride" keyword
+				i.e public override void printfullname() { }
+
+	NB: virtual keyword means that the method can be overriden by any of the derived 
+		classes' methods.
+
+### Method overriding vs Method hidding
+	* Method overriding, a base class reference variable pointing to a derived class
+		object, will invoke the "overriden method in the child class".
+		i.e the childClass method will execute.
+
+	*Method hidding, a base class reference variable pointing to a child class object
+		, will invoke the "hidden method in the base class".
+		i.e the baseClass method will execute.
+
+	NB: new keyword must be present in the hidding method.
+		i.e public new void printFullName() { }
+
+### Method overloadding
+	Same function name but different signature i.e Number of parameters being differrent 
+	in count and/or types or kinds (e.g output and byvalue).
+
+NB: Method overloadding and Method overriding are used interchangeably (similar);
+
+
+
+
