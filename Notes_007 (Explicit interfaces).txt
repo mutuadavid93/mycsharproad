@@ -1,0 +1,18 @@
+### Explicit interfaces implementation
+
+	Inside the class which implements the interface method;
+		* The method is declared void without access modifier.
+		* Its name appended with the interface's name.
+
+		i.e void InterfaceName.methodName () {  }
+
+	Explicitly implemented interface members can only be invoked through
+		typeCasting: i.e ((IinterfaceName)obj reference variable).method();
+
+		e.g ((IStudent)std).printStudentName();
+
+	If you want to make one of the interfaces default, you implement its member
+		normally and the other member explicitly and invoke by "class reference" 
+		and "typecasting" respectively.
+
+	

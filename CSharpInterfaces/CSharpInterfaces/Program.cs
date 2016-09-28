@@ -19,16 +19,38 @@ namespace CSharpInterfaces
         void printTeacherName();
     }
 
-    //A class inherit the interface
-    public class Student : ITeacher
+    interface IHeadTeacher
+    {
+        void printTeacherName();
+    }
+
+    //A class inherit the interface(s)
+    public class Student : ITeacher, IHeadTeacher
     {
 
-        //Implement the Interface Members
+        //Implement the Interface Members.
+        //By implementing the member normally,
+        //you make Teacher interface default.
         public void printTeacherName()
         {
-            Console.WriteLine("printTeacherName method impemented");
+            Console.WriteLine("ITeacher interface method impemented");
+        }
+
+        //Explicitly implement the IHeadTeacher interface
+        void IHeadTeacher.printTeacherName()
+        {
+            Console.WriteLine("IHeadTeacher interface method implemented");
         }
     }
+
+    /******************************
+     * 
+     *      EXPLICIT INTERFACE 
+     *      IMPLEMENTATION
+     * 
+     * **************************/
+
+
 
     class Program
     {
@@ -37,6 +59,10 @@ namespace CSharpInterfaces
             //Instantiate and Invoke Method
             ITeacher teachername = new Student();
             teachername.printTeacherName();
+
+            //Explicit invokation, by Typecasting
+            Student student = new Student();
+            ((IHeadTeacher)student).printTeacherName();
         }
     }
 }

@@ -1,0 +1,36 @@
+### Abstraction
+	A Class or abstract class member is declared abstract by using the "abstract" keyword.
+	NB: Abstract classes "CAN NEVER" be instantiated but instead they are always used as
+		BASE (parent) classes;
+
+	NB: Any class that inherits (its a child of) an abstract class, it must provide 
+		implementation for all of the abstract class's members. Otherwise it's 
+		also marked abstract;
+
+	NB: The implementaion must use the "override" keyword;
+		i.e public override void printName() { }
+
+	NB: An abstract class "CAN NEVER" be sealed.
+
+## An abstract class can have a "MIXTURE" of both abstract and non abstract members.
+
+
+
+### Differences between Abstract classes and interfaces
+	* An abstract class can have implementation for "some" of its members but an 
+		interface cannot have implementation for "any" of its members.
+
+	* An abstract class members can have access modifiers which are private by 
+		default whilst interface members are public by default but can't 
+		have the access modifier explicitly.
+
+	* Interfaces "CANNOT" have fields whilst an abstract class can.
+	
+	* An interface can "ONLY" inherit from other interfaces whereas an abstract
+		class can inherit both from other abstract classes and interfaces.
+
+
+
+
+
+
