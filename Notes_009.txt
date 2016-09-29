@@ -1,0 +1,12 @@
+### Multiple class iheritance using interfaces
+	
+You have two classes (A, B) inheriting from interfaces(IA, IB) respectively,
+	and another class (AB) which inherits both the interfaces. Inside class AB 
+	we will have to create the instances of the two classes then invoke the 
+	member method from each of the classes (A and B). 
+
+Thus we have provided the implementation.
+
+Syntax/Trick: You have a set of classes which inherit from different interfaces,
+		then Another Single class which implements the latter classes 
+		indirectly through inheriting their interfaces.

@@ -1,0 +1,13 @@
+### Delegates
+	Its a type safe function pointer.
+
+i.e A delegate points to a function and when you invoke this delegate the function 
+	will be invoked.
+
+	Gives you Flexibility.
+
+NB: The signature of the delegate and that of the function which its pointing to must 
+	be the "SAME".
+		i.e the return type and Number and type of parameters.
+
+NB: the method Must be "static" as well.

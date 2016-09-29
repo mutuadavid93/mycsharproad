@@ -1,0 +1,3 @@
+### Lists, They are declared using the list keyword and type
+
+	i.e List<int> list = new List<int>();
