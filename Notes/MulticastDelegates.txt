@@ -1,0 +1,12 @@
+### Multicast delegate 
+	is a delegate that has references to more than one function.
+
+	Once its invoke, all the methods it was pointing to execute.
+
+# Created by:
+		* + or += to register a method with the delegate.
+		- or -= to un-register a method with the delegate.
+
+	e.g DelegateOne del = new DelegateOne(methodOne);
+		del += methodTwo; del += methodThree;
+	

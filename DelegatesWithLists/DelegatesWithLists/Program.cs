@@ -18,10 +18,29 @@ namespace DelegatesWithLists
             employees.Add(new Employee() { salary = 20000, empName = "Johnson Foo" });
             employees.Add(new Employee() { salary = 6000, empName = "Jane Doe" });
 
-            //invoke the promoteEmp and pass the list
-            Employee.promoteEmp(employees);
+            //Instantiate the delegate
+            IsPromotable isEligibleToPromote = new IsPromotable(Promote);
+
+            //Now invoke the promoteEmployee()
+            Employee.promoteEmp(employees, isEligibleToPromote);
         }
+
+        //Create the method with signature same to delegate's
+        public static bool Promote(Employee emp)
+        {
+            if (emp.salary >= 10000)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
+
+    public delegate bool IsPromotable(Employee emp);
 
     public class Employee
     {
@@ -31,13 +50,13 @@ namespace DelegatesWithLists
 
 
         //promote method
-        public static void promoteEmp(List<Employee> emplist)
+        public static void promoteEmp(List<Employee> emplist, IsPromotable isEligibleToPromote)
         {
-            foreach (Employee emp in emplist)
+            foreach (Employee employee in emplist)
             {
-                if (emp.salary >= 10000)
+                if (isEligibleToPromote(employee))
                 {
-                    Console.WriteLine(emp.empName + " Promoted");
+                    Console.WriteLine(employee.empName + " Promoted");
                 }
             }
         }

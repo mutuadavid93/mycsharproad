@@ -1,0 +1,28 @@
+### Delegate trick and tips
+
+	* Create the function with the logic and pass a "List" and a "delegate" 
+		instance as parameters.
+
+		i.e public static void logicMethod(listInstance, delegateInstance) { }
+
+	* This means we have to declare a List then add data into it, declare a delegate
+		with same signature as the function its pointing to.
+
+	* Create your method with same signature as the delegate and pass the message 
+		as a parameter. In this method, evaluate your logic. 
+	
+		NB: You are using the default properties in your conditional statement 
+			to set the condition.
+
+	* Instantiate your delegate and pass the method as a parameter.
+
+	* Inside the foreach loop of the logicMethod, initialize the delegate's function by 
+		passing the data as a parameter.
+		i.e proceeding(student);
+	
+	* Finally invoke the logicMethod inside the main() and pass the reference vars 
+		of the "List" and the "Delegate".
+
+NB: The delegate Must always be outside the classes and outside the main() body!!
+
+Whooah! You are done.
