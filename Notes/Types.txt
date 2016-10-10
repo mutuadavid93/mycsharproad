@@ -1,0 +1,18 @@
+### Types
+	Means Classes, Enums, Structs, Interfaces and delegates. While properties 
+	and methods are type members.
+
+C# Access modifiers: 
+	Private, Protected, Internal, Protected Internal and Public.
+
+	NB: Type members can have all the access modifiers (5) whereas Types
+		can only have two (2 i.e internal, public) of the five (5) modifiers.
+
+Regious help collapse pieces of C# code
+	Syntax; 
+		#region RegionName
+			//content
+		#endregion
+
+	Alternative: Expand and collapse regions using;
+		Edit => Outlining => ToggleAllOutlining

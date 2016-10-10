@@ -1,0 +1,18 @@
+### Attributes
+	Allow you to add declarative information to your programmes. 
+
+	e.g Warning that a function is now deprecated and give hint of what's the 
+	current funtion of completing the same task.
+
+	i.e [Obsolete] and you can as well pass parameters i.e [Obsolete("Message")]
+
+### Reflection
+	Ability of inspecting an Assemblie's meta-data at runtime. e.g How many 
+	Types does an assembly have, how many type members does a Type have?
+
+	Reflection enables us to use code that isn't available at compiletime 
+	(Late Binding).
+
+# When you want the Type class in Reflection you can use two ways;
+	* typeof keyword, and GetType().
+

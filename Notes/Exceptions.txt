@@ -1,0 +1,78 @@
+### Exceptions
+	Unforeseen error when a program is executing.
+
+NB: we use StreamReader object from IO namespace to read and write to files.
+
+	NB: You can have more than one "catch" method. Rule: Have more specific 
+		Exceptions @the top and the General ones @the bottom.
+
+	* its also a practical example of using Inheritance.
+
+	NB: All the resources should be released at the "finally" block.
+
+	NB: When Wrting into Files, you "MUST" close the operation. Otherwise 
+		The writing can't happen. i.e streamWriter.Close();
+
+
+### Inner Exceptions
+	
+	NB: If we want to retain the previous existing Exception, we pass it as 
+		a parameter in the constructor of the current Exception.
+	
+
+		i.e throw new FileNotFoundException(Message, ex);
+
+	NB: Inner Exceptions help you get what caused the current exception.
+
+		Console.Write(exception.innerException.GetType().Name);
+
+	NB: Inner Exception; Refers to the First Exception while Current Exception
+		refers to the immediate Exception.
+
+	NB: Anytime you try to retrieve InnerException, Always check that InnerException 
+		Object is not Null.
+
+	NB: When you use an InnerException, You Must use another try catch block as a parent 
+		of the current try catch block. This way you catch Exception thrown by the 
+		current exception.
+
+	NB: To retain the original Exception, pass it as a parameter into the 
+		constructor of the Current Exception.
+
+### Custom Exception
+	Your own defined Exceptions, which you decide what to print incase of execeptions.
+
+	NB: Serializable: Decorator, which enables breaking of an Object into packects 
+		which can be sent over a network to be used by another application.
+
+	Steps to Create Custom Exception:
+	1. Create a class that derives from System.Exception class.
+
+	2. Provide a public constructor, that takes in a string parameter.
+		it passes the string parameter, to the base Exception constructor 
+		i.e public constructorName(string message) : base(message) {}
+
+	3. To track back the original Exception you use InnerException by Overloading 
+		the constructor accordingly.
+
+	4. If you want your custom Exception class to aplly accross application domains 
+		, then use the Serializable attribute. Then use those when overloading 
+		the constructor and passing SerializationInfo and SeriliazationContext
+		as parameters.
+
+### Exception Abuse
+	Refers to using Exception Handling to implement an application's logical flow.
+
+### Exception Abuse handling Solved.
+	You use alternative programming validations e.g.
+		* bool convert = int32.TryParse(string input, out result); 
+		* Instead of using Convert.ToInt32(string input);
+	
+
+
+
+
+
+
+
+

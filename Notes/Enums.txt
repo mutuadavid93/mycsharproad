@@ -1,0 +1,32 @@
+### Enums
+	Refers to strongly typed constants.
+
+	Created using the enum keyword; i.e public enum Gender{}
+
+	NB: Enums make your program more readable and maintainable.
+
+Tip: if a program uses set of "NUMBER", consider replacing the with
+	enums, which makes the program more; Readable and Maintainable.
+
+### Enums in C#
+	You can specify the type of an enum instead of the default int32 i.e
+		public enum Gender : short { }
+
+	Then cast the array type to get Names and Values of the enum properties.
+
+		i.e 
+		* short[] values = (short[])Enum.GetValues(typeof(Gender));
+		* string[] names = Enum.GetNames(typeof(Gender));
+
+	NB: Its possible to customize the Datatypes and Values your enums have.
+		i.e Male = 5;
+
+	NB: An explicit cast is required to convert an enum to another datatype and 
+		vice versa.
+		e.g Gender g = (Gender)3; or int Num = (int)Gender.Male;
+
+	NB: An enum of one type cannot be assigned implicitly to another 
+		enum of the same type even though the underlying values of their 
+		members are the same.
+
+

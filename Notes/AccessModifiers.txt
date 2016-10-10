@@ -1,0 +1,59 @@
+### Access modifiers:
+
+	* Private => Are only available within the containing type.
+
+	* Public => Are available any where. i.e No restriction.
+
+	* Private => Available within the containing type (class) and to any 
+		derived/child class.
+
+NB: "base" or "this" keyword refers to the Parent class's instance in the child class scope.
+	i.e
+		base.fieldFromParent = 200;
+		this.parentMember = 200;
+
+NB: But both "this" and "base" keyword "CAN'T" be used in a static Method.
+
+
+### Internal
+	Only available within the containing assembly.
+
+Assembly types:
+	# Executables (*.exe) and # DLLs.
+
+An assembly contains the intermediate language of your source code.
+
+	NB: An Assembly contains Types and Type members. And within a solution we 
+		can add more than one class project (Assemblies).
+
+Solution: You Include the reference to that assembly in your current assembly, 
+		then add "using assemblyOne" directive.
+
+		After which you can go ahead and do the instantiation.
+
+### Protected internal:
+	The member is accessible anywhere both within the containing assembly 
+	and any class outside the assembly but inheriting from the containing 
+	class.
+
+### Access modifiers for Types
+	Must either be Public or Internal access modifiers.
+
+NB: For Types, if you don't specify the access modifier, by default the access 
+	modifier is assumed "internal".
+
+NB: Default access modifier for Type Members it's "Private".
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

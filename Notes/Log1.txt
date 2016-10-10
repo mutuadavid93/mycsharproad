@@ -1,0 +1,2 @@
+DirectoryNotFoundException
+Could not find a part of the path 'F:\CSharpWorkspace1\Notes\Exceptions.txt'.
