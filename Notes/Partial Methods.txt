@@ -1,0 +1,19 @@
+### Partial Methods
+	Partial Method has two parts => A method declaration and the implementation. 
+		which can be in the same file or in different partial classes.
+
+	i.e 
+		declare: partial void SamplePartialMethod();
+		implement: partial void SamplePartialMethod() { //statements }
+
+NB: partial methods are private by default BUT you CANNOT have explicit access 
+	modifiers.
+
+NB: All return types of any partial method are "void".
+
+NB: Signature of partial method declaration, must match with the signature of the
+	implementation.
+
+NB: A partial method can only exist within a partial Type.
+
+NB: A partial method can only be implemented once.

@@ -1,0 +1,47 @@
+### Reasons to override ToString()
+
+
+	Every Type inherits from System.Object Namespace.
+
+	NB: Out of the 5 Methods, you can only override 3; Equals(), GetHashCode(), 
+		and ToString().
+
+	NB: We override the ToString() of a Complex type to get the String represenation
+		with better meaning.
+
+Syntax: public override string ToString(){ return this.lName+" , "+fName; }
+Invoke: Convert.Tostring(Object Ref Var) or instanceVar.ToString();
+
+### Reasons to ovverride Equals()
+	Equals looks for equality of objects.
+
+NB: If two Reaference Vars are pointing to the same Object, we say that they are
+	Equal. Therefore the values are equal too.
+
+NB: "==" is used for Reference Equality Whereas "Equals()" is used for Value Equality.
+
+NB: In your class if you are overriding Equals() you Must also Override GetHashCode().
+
+
+Steps:
+	* Make sure the Object is not Null
+	* Make sure the object is of type Customer
+	* Now TypeCast the Passed Object to Customer
+	* Return True or False after comparison
+	* Override GetHashCode of the properties in context.
+
+NB: GetHashCode() is Int whereas Equals() is Boolean.
+
+
+### Difference btn Convert.ToString() and ToSTring()
+
+	Convert.ToString() => Handles nulls and Returns an Empty string if the passed in
+		object is null.
+
+	ToString() => Doesn't Handle nulls, and throws a Null Reference Exception.
+
+The choice depends on what you are trying to achieve with your application.
+
+
+
+

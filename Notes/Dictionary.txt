@@ -1,0 +1,32 @@
+### Dictionary:
+	A collection of (Key, Value) pairs.
+
+	NB: Dictionary keys are unique and are used to access values.
+
+	You can Loop a dictionary and get its content or use the unique 
+	keys to extract values.
+
+	i.e 
+	 	* Customer cust20 = dictCustomers[20];
+		* foreach()
+
+Syntax: Dictionary<TKey, TValue> dict = new Dictionary<TKey, TValue>();
+
+NB: KeyValuePair<int, Customer> cust === var cust
+
+NB: All the Dictionary keys and values are conatained in: dict.Keys and dict.Values
+	respectively.
+
+	NB: the loop syntax: foreach (Customer cust in dictCustomers.Values){}
+		OR
+		foreach (KeyValuePair<int, Customer> customer in dictCustomers){
+			Customer cust = customer.Value;
+		}
+
+# To check whether a Key is present, use ContainsKey() method on the 
+	dictionary instance.
+
+
+
+
+

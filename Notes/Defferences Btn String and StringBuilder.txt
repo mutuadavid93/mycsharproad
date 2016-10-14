@@ -1,0 +1,22 @@
+### Differences btn System.String and System.StringBuilder
+	
+	System.String is Immutable => i.e It consumes memory and that memory is 
+		never freed. e.g string manipulation by concatenation.
+
+		It results into "orphaned string objects" in memory which are only
+		cleared by garbage collector.
+
+	System.StringBuilder is Mutable => i.e Same string object will be changed 
+		in memory no matter how many times the variable changes.
+
+		Create an Instance of the StringBuilder object and use Append() to 
+		concatenate the other bits of the string.
+
+NB: System.String is in System.String Namespace but System.StringBuilder is in System.Text
+		Namespace.
+
+
+NB: When ever there is Heavy string manipulation is involved, use StringBuilder instead
+  	of String. E.g in Looping Strings.
+
+	Benefits: Performance improved.

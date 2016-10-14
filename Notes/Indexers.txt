@@ -1,0 +1,9 @@
+### Indexers
+	Used in Sessions and SQL Server Datasource to read their values. You can 
+		either use String or Intergral indexer to retrieve the value.
+
+## Creating Indexers
+	An indexer is created with this keyword and has both set and get accessors 
+		as well as parameters. Just like a method.
+
+## Indexers can be Overloaded based on the "Number" and "Type" of parameters.	

@@ -1,0 +1,21 @@
+### Late Binding
+	Early Binding is used by default in most cases.
+
+## Late Binding, Used when we don't have Knowledge of the class at compile time.
+	Steps:
+		* Load the ExecutingAssembly
+		* GetTypes within that assembly
+		* Instatiate the Type (class)
+		* Get the Method information we want to Execute
+		* Create an array of the Parameters to pass in the Method
+		* Invoke the method. You have to Typecast the object to string.
+
+NB: But its Ironical, The class and the Method are still required at runtime, so
+	create them!!!
+
+Cons:
+	Its complicated.
+	Slower than Early Binding.
+	Errors only flagged at Runtime.
+
+NB: ONLY use Late Binding when working with "Objects that are not available at Runtime".

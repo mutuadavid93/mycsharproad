@@ -1,0 +1,46 @@
+### Partial classes
+	Allow us to split a class into two or more physical files. Then all these
+		parts are combined into a single class, when the app is compiled.
+
+	NB: The partial keyword can as well split an interface or a struct into
+		two/more files.
+
+NB: The partial class names should be the same. So that C# compiler knows that 
+	the other bits are in the other partialclass.
+
+NB: You must use "partial" keyword.
+
+Navigate to the "code behind file" (e.g WebForm.aspx.cs) and do your instatiations 
+	there and invokation. Then use Response.Write(); to print the results.
+
+Usage: 
+	To separate developer's custom code (Stored in *.aspx.cs) from System generated 
+		code (strored in *.aspx.designer.cs).
+
+	Developers can work on the partial files simultaneously.
+
+
+### Rules to follow when creating partial classes.
+	1. All the parts spread accross different files, must use the "partial" keyword.
+		i.e public partial class ClassName{}
+
+	2. All the parts spread accross different files, must have the same access
+		modifiers.
+
+	3. If any of the parts are declared abstract, then the entire type is considered abstract.
+
+	4. if any of the parts is declared sealed, then the entire type is now considered sealed.
+
+	5. if any of the parts inherits a class, the entire type inherits that class.
+
+	6. In case of Multiple interface inheritance, the partial classes should provide All
+		of the methods in those interfaces (They can Share in a Mix).
+
+	7. Any members that are ceclared in a partial definition are available to all the other 
+		parts of the partial class.
+
+
+
+
+
+		

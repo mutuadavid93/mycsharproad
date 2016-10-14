@@ -1,0 +1,31 @@
+### Generics
+	Allow us to Design classes and methods decoupled from the data types.
+
+	NB: Converting Value Types to Reference Types at Runtime is called "Boxing".
+		e.g Int to Object.
+
+	Boxing and Unboxing causes performance Degradation.
+
+Solved by using Generics;
+
+NB: When a Member (Method) is declared to use Generic, it means it's independent
+	of the Type it operates(e.g int, string e.t.c) on.
+
+	Syntax: MethodName<T>(T value1, T value2){}
+	Invoke: classInstance.MethodName<string>("AB", "AB");
+
+	* They Maintain Strong Typing.
+
+NB: Generic can also be Applied to Individual Types (classes, delegates e.t.c).
+	i.e Customer<T>{}
+
+	# @Invokation time, You must specify what type is T.
+		i.e bool Equal = Customer<int>.AreEqual(20, 20);
+
+
+NB: It's just a convention to us T, You can use any other Character.
+
+
+
+
+

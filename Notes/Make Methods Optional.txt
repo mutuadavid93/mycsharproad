@@ -1,0 +1,41 @@
+### Make Method Parameters optional
+
+	Through: 
+		* Parameter arrays
+		* Method overloading
+		* Specify parameter defaults
+		* OptionalAttribute that is present in 
+			System.Runtime.InteropServices namespace.
+
+# Using parameter arrays:
+	Allows you to pass some aurguments during invokation and those in the 
+		object are optional.
+
+	NB: A parameter array must be the last parameter in a formal parameter list.
+
+# Using Method Overloading:
+	The same method signature: overload by the number and type of parameters.
+
+# Using Default parameters:
+	Basically by assigning a value to one of the parameters.
+
+	i.e public static void addNumbers(int x, int y, int[] anotherNum = null){ } 
+
+	NB: The optional parameter MUST always appear last in the parameter list.
+
+NB: You can as well use Named parameters during invokation to assign the axart 
+	value of your choice.
+
+	i.e testMethod(reqd_param, opt_param:value);
+
+# Using OptionalAttribute:
+	i.e methodName([Optional] int numb4){ }
+
+NB: if the OptionalAttribute is used, then it MUST follow immediately after the 
+	required parameters, then the rest of optional params finnally.
+
+
+
+
+
+	
