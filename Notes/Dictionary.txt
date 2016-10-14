@@ -14,6 +14,42 @@ Syntax: Dictionary<TKey, TValue> dict = new Dictionary<TKey, TValue>();
 
 NB: KeyValuePair<int, Customer> cust === var cust
 
+
+### Dictionary Methods:
+	
+	## Handle Exceptions
+
+	  Customer cust;
+  	* TryGetValue(key, out value) e.g TryGetValue(102, out cust);
+		Returns a Boolean.
+
+	## Find Total elements in Dictionary
+
+	* Count() => A LINQ Extension method to return total elements.
+
+	## Remove an element from the Dictionary
+
+	* Remove(Key) i.e dictCustomers.Remove(102);
+
+	## Remove ALl the Items from a Dictionary
+
+	* Clear() i.e dictCustomers.Clear();
+
+	## Convert an Array to Dictionary
+
+	* ToDictionary(KeyValue, Value);
+
+	Customer[] customers = new Customers[length];
+	customers[index] = customerInstance;
+
+	Dictionary<int, Customer> dict = customers.ToDictionary(cust => cust.ID, cust => cust);
+
+	Then Proceed with foreach to get the values as normal.
+
+	## Through the above technique you can convert lists to dictionaries too.
+
+
+
 NB: All the Dictionary keys and values are conatained in: dict.Keys and dict.Values
 	respectively.
 

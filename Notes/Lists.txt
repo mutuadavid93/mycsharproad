@@ -1,3 +1,119 @@
 ### Lists, They are declared using the list keyword and type
 
-	i.e List<int> list = new List<int>();
+	A list can be used to create a collection of any type.
+
+	i.e List<int> list = new List<int>(); 
+
+	You can as well overload a List constructor
+		to specify the "SIZE" during declaration.
+
+	i.e List<int> list = new List<int>(2);
+
+NB: Lists grow in size automatically.
+
+	We access objects in an array using indexes. Customer c = customers[0];
+
+NB: Always use a foreach when dealing with Collections. You can as well only add 
+	objects that inherit from the parent class as well.
+
+NB: Insert(index, object) adds an object to that index whereas Add pushes at the 
+	end of the List.
+
+NB: To get the position of a given object, we use listInstance.IndexOf(object, startIndex);
+
+	Overloaded version: listInstance.IndexOf(object, startIndex, Count);
+
+
+### Methods in a List:
+	
+	# Contains() => check if an item exists in a List, returns a Boolean.
+			i.e listInstance.Contains(object);
+		
+		You can as well use;
+			i.e listInstance.Exists(emp => emp.Name.StartsWith("P"));
+
+	# Find() => Searches for an elem that matches the conditions defined by the specified
+			lambda expression and returns "ONLY the first matching" item from the List.
+
+			Returns an Object. 
+
+	# FindLast() => Searches and returns only the last object matching the 
+		conditions in a lambda expression.
+
+	# FindAll() => Returns All the items matching the Lambda expression. 
+		Returns a List<> type.
+
+	# FindIndex() => Returns an Index of the First Matching element in the list
+		returns an int.
+			i.e 
+		* FindIndex(cust => cust.Salary > 5000);
+		* Overload to include startIndex
+		* Overload to include Count.
+
+	# FindLastIndex() => Returns the index of the LAST matching element from
+		 the List.
+
+
+
+### Convert an Array to List:
+	Use ToList(); it returns a List back.
+
+	i.e List<Employee> emplist = empArray.ToList();
+
+	Then Loop through using a foreach loop.
+
+### Convert the List to an Array:
+	Employee[] empArray = listEmp.ToArray();
+
+
+### Convert a List to a Dictionary:
+	Dictionary<int, Customer> dict = listCustomer.ToDictionary(x => x.ID);
+
+	then loop; foreach(KeyValuePair<int, Customer> kvp in dict){ }
+
+
+
+### Using Ranges in Lists:
+	
+	# AddRange() => Allows addition of a List of items to the end of the
+		 list.
+
+		i.e listOneInstance.AddRange(listTwoInstance);
+	
+
+	# GetRange() => Retrieve more than one item from the list. Then loop using
+		foreach.
+
+		i.e List<Customer> customers = listCustomers.GetRange(startIndex, Count);
+
+	# InsertRange() => Insert a List of items to the front of the List.
+
+		i.e listOneInstance.InsertRange(startIndex, listTwoInstance);
+
+	# RemoveAt() => Remove an item from a specified position.
+
+		    i.e listCustomers.RemoveAt(index);
+			OR
+			listCustomers.RemoveAt(FindLastIndex(cust => cust.Salary > 5000));
+
+	# RemoveAll() => Remove all Items matching a Lambda's Condition.
+
+	# RemoveRange() => Remove more than one item from the List.
+		listCustomers.RemoveRange(startIndex, Count);
+
+
+### Sorting a List of Simple Types:
+	e.g int, string, char, float e.t.c
+
+	# Default Ascending order;
+		simpleListInstance.Sort();
+
+	# Descending order;
+		simpleListInstance.Reverse();
+
+NB: .NET uses IComparable interface to sort Simple Types because they inherit
+ that interface.
+	
+
+
+
