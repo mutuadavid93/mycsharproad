@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections.ObjectModel;
 
 namespace Lists
 {
@@ -38,9 +39,21 @@ namespace Lists
             employeeList.Add(emp2);
             employeeList.Add(emp3);
 
+            //Now sort This List
+            employeeList.Sort();
+
+            //After sorting
+            Console.WriteLine("SORTING BY SALARY: ");
+            foreach (Employee empSorted in employeeList)
+            {
+                Console.WriteLine(empSorted.salary);
+            }
+            Console.WriteLine();
+
             //Get the Position of an element
             //in the List
-            Console.WriteLine(employeeList.IndexOf(emp3, 2));
+            Console.WriteLine("Emp3 is at index : {0}", employeeList.IndexOf(emp3, 2));
+            Console.WriteLine();
 
             //Check whether an item exists in a list
             if (employeeList.Contains(emp3))
@@ -52,6 +65,20 @@ namespace Lists
             {
                 Console.WriteLine("Employee 3 doesn't exist in the List");
             }
+
+            //Now Instantiate the SortBy() and 
+            //pass its instance to Sort() 
+            //To sort the List by fullName.
+            Console.WriteLine("SORTING BY FULLNAME:");
+
+            SortByName sortbyname = new SortByName();
+            employeeList.Sort(sortbyname);
+
+            foreach (Employee empSorted in employeeList)
+            {
+                Console.WriteLine(empSorted.fullName);
+            }
+            Console.WriteLine();
 
             //Search for the FIRST Employee with a Salary
             //Less than 20000
@@ -83,13 +110,52 @@ namespace Lists
                 Console.WriteLine("Name : {0} && Salary : {1}", employee.fullName, employee.salary);
                 Console.WriteLine("-------------------------------------------------");
             }
+            
+            //Now pass the delegate literal into the Sort()
+            //employeeList.Sort(delegate(Employee empA, Employee empB) { return empA.ID.CompareTo(empB.ID); });
+
+            //Alternatively use a Lambda Expression inside the Sort()
+            employeeList.Sort((x, y) => x.ID.CompareTo(y.ID));
+
+            Console.WriteLine("SORTING BY ID USING DELEGATES");
+            foreach (Employee employeeDelegate in employeeList)
+            {
+                Console.WriteLine(employeeDelegate.ID);
+            }
+            Console.WriteLine();
+
+            //Make a List ReadOnly
+            ReadOnlyCollection<Employee> readOnlyEmpList = employeeList.AsReadOnly();
+
+        }// End class Program
+
+
+        //SORTING WHEN WE DON'T OWN THE LOGIC CLASS
+        //Instead we create our own class.
+        public class SortByName : IComparer<Employee>
+        {
+            public int Compare(Employee x, Employee y)
+            {
+                return x.fullName.CompareTo(y.fullName);
+            }
         }
 
-        public class Employee
+
+        public class Employee : IComparable<Employee>
         {
             public int ID { get; set; }
             public string fullName { get; set; }
             public int salary { get; set; }
+
+
+            //Now Implement IComparable Interface Method
+            //To help compare complex types.
+            public int CompareTo(Employee other)
+            {
+                //NB: "this" Means the Current Instance(List item)
+                //of the Object of type Employee.
+                return this.salary.CompareTo(other.salary);
+            }
         }
     }
 }

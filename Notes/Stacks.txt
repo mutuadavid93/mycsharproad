@@ -1,0 +1,15 @@
+### Stack
+	Observes the LIFO (Last In First Out).
+
+	# We use Push() to add an item at the top of a stack.
+
+	# Then Pop() to remove and return the value at the top of the stack
+
+	# Peek() returns the item present at the top of the stack.
+
+	# Contains() Looks whether the item exist in a stack.
+
+NB: Instantiation of ALL the methods and the stack itself is;
+	Syntax:
+
+	ObjectType refvar = new ObjectType();

@@ -1,0 +1,13 @@
+### Queues:
+	Observes FIFO (First In First Out).
+
+	NB: We add items to a queue using Enqueue() method. The method adds items
+		at the end of the queue.
+
+	NB: Retrieve Item from a Queue, we use Dequeue(). Removes an item and 
+		returns it from the beginning of the queue. Affects the queue capacity.
+
+	NB: Retrieve and return Item from begining of Queue and not remove it, we use the 
+		Peek() method.
+
+	NB: Contains() => checks for existence of an object in the queue.

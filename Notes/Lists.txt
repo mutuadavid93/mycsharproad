@@ -115,5 +115,76 @@ NB: .NET uses IComparable interface to sort Simple Types because they inherit
  that interface.
 	
 
+### Sorting a List Complex Types:
+	Our class has to extend IComparable interface. Which has CompareTo()
+		method is has to be implemented.
+
+	NB: If you are trying to sort based on a property, just use
+		one line i.e
+
+		return this.Salary.CompareTo(other.Salary); 	
+
+### Sorting when you don't own the class:
+	Just Implement IComparer Interface's Compare() method, then 
+		Instantiate that class and pass that instance in the Sort() method.
+
+ 	Syntax: public int Compare(Object x, Object y) 
+
+	then; return x.fullName.CompareTo(y.fullName);
+
+### Sorting a List of complex types using delegate:
+
+	A delegate points to a function, when you invoke that delegate, it 
+		then invokes the function as well.
+
+	Steps:
+		* Create a function
+			i.e private static int CompareEmployee(Employee x, Employee y)
+        			{
+          			  return x.ID.CompareTo(y.ID);
+      				}
+
+		* Create an Instance of the delegate
+			i.e Comparison<Employee> empDelegate = new Comparison<Employee>(CompareEmployee);
+	
+		* Pass the delegate instance into the Sort()
+			i.e employeeList.Sort(empDelegate);
+
+	You are done!
+
+### Alternatively, you can use this one line:
+	i.e
+	employeeList.Sort(delegate(Employee empA, Employee empB) { return empA.ID.CompareTo(empB.ID); });
+
+### Choice Three:
+	Use lambda Expressions;
+	i.e employeeList.Sort((x, y) => x.ID.CompareTo(y.ID));
+
+
+### Other Methods in Lists
+	
+	# TrueForAll() => Returns a Boolean if the all the items in the list 
+		match the predicate.
+
+	# AsReadOnly() => You can only Read but never Add / Remove items from 
+		a list which uses this method.
+	
+		NB: it belongs to System.Collections.ObjectModel Namespace.
+
+		NB: But you can Retrieve an Item using Index.
+	
+	# TrimExcess() => Sets the capacity to the actual number of elements 
+		actually present in the list.
+
+		NB: The TrimExcess() has a Threshold of 90%. i.e There is no 
+			need to use the method when the list contains alamost
+			90% content.
+
+
+
+
+
+
+
 
 
